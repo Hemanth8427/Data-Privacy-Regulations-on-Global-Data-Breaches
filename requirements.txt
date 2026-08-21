@@ -1,0 +1,31 @@
+# Pinned to the versions this project was developed and tested against.
+# Exact pins support the reproducibility requirement in dissertation section 3.10:
+# the same input CSV and the same versions produce identical models and figures.
+
+# --- Dashboard ---
+streamlit==1.46.1
+
+# --- Data handling ---
+pandas==2.3.1
+numpy==1.26.4
+
+# --- Visualisation ---
+matplotlib==3.10.5
+seaborn==0.13.2
+
+# --- Statistics ---
+scipy==1.16.0
+statsmodels==0.14.6
+
+# --- Machine learning ---
+scikit-learn==1.7.0
+xgboost==3.4.1
+joblib==1.5.1
+
+# --- Model interpretation ---
+# Pinned below 0.52: from 0.52 onwards shap requires numpy>=2, which conflicts
+# with the numpy 1.26.4 pin above. Upgrade both together or neither.
+shap==0.46.0
+
+# --- Notebook only (Excel export in Ref_Hemanth.ipynb); not used by the app ---
+openpyxl==3.1.5

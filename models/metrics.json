@@ -1,0 +1,265 @@
+{
+  "source_file": "data.csv",
+  "library_versions": {
+    "scikit-learn": "1.7.0",
+    "pandas": "2.3.1",
+    "xgboost": "3.4.1"
+  },
+  "random_state": 42,
+  "test_size": 0.2,
+  "stratified": false,
+  "high_severity_quantile": 0.75,
+  "threshold": 20000000.0,
+  "raw_rows": 418,
+  "analysis_rows": 417,
+  "train_rows": 333,
+  "test_rows": 84,
+  "year_min": 2004,
+  "year_max": 2022,
+  "sectors": [
+    "academic",
+    "app",
+    "finance",
+    "gaming",
+    "government",
+    "government, health",
+    "government, military",
+    "health",
+    "legal",
+    "military",
+    "military, health",
+    "misc",
+    "misc, health",
+    "ngo",
+    "retail",
+    "tech",
+    "tech, app",
+    "tech, health",
+    "tech, retail",
+    "tech, web",
+    "telecoms",
+    "transport",
+    "web",
+    "web, gaming",
+    "web, military",
+    "web, tech"
+  ],
+  "methods": [
+    "hacked",
+    "inside job",
+    "lost device",
+    "oops!",
+    "poor security"
+  ],
+  "features": [
+    "year",
+    "sector",
+    "method",
+    "gdpr_post",
+    "ccpa_post"
+  ],
+  "has_xgboost": true,
+  "models": [
+    "Logistic Regression",
+    "Decision Tree",
+    "Random Forest",
+    "Gradient Boosting",
+    "XGBoost"
+  ],
+  "primary_model": "Random Forest",
+  "metrics": [
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.6904761904761905,
+      "Precision": 0.3333333333333333,
+      "Recall": 0.3,
+      "F1": 0.3157894736842105,
+      "ROC_AUC": 0.69140625,
+      "PR_AUC": 0.4761562769013497
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 0.75,
+      "Precision": 0.4444444444444444,
+      "Recall": 0.2,
+      "F1": 0.27586206896551724,
+      "ROC_AUC": 0.657421875,
+      "PR_AUC": 0.3580224904933356
+    },
+    {
+      "Model": "XGBoost",
+      "Accuracy": 0.6904761904761905,
+      "Precision": 0.2857142857142857,
+      "Recall": 0.2,
+      "F1": 0.23529411764705882,
+      "ROC_AUC": 0.6265625,
+      "PR_AUC": 0.35171696550874026
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.7619047619047619,
+      "Precision": 0.5,
+      "Recall": 0.1,
+      "F1": 0.16666666666666666,
+      "ROC_AUC": 0.721875,
+      "PR_AUC": 0.46959131503214574
+    },
+    {
+      "Model": "Gradient Boosting",
+      "Accuracy": 0.7023809523809523,
+      "Precision": 0.2222222222222222,
+      "Recall": 0.1,
+      "F1": 0.13793103448275862,
+      "ROC_AUC": 0.641796875,
+      "PR_AUC": 0.3404906388862233
+    }
+  ],
+  "class_distribution": [
+    {
+      "Dataset": "Training",
+      "Normal severity": 249,
+      "High severity": 84,
+      "Total": 333
+    },
+    {
+      "Dataset": "Testing",
+      "Normal severity": 64,
+      "High severity": 20,
+      "Total": 84
+    }
+  ],
+  "rf_importance": [
+    {
+      "Feature": "numeric__year",
+      "Importance": 0.3819705381321675
+    },
+    {
+      "Feature": "categorical__sector_web",
+      "Importance": 0.09116799900000676
+    },
+    {
+      "Feature": "categorical__sector_health",
+      "Importance": 0.04873386694568202
+    },
+    {
+      "Feature": "numeric__ccpa_post",
+      "Importance": 0.03919562554177201
+    },
+    {
+      "Feature": "numeric__gdpr_post",
+      "Importance": 0.036432793524354946
+    },
+    {
+      "Feature": "categorical__method_hacked",
+      "Importance": 0.032895315106388774
+    },
+    {
+      "Feature": "categorical__sector_retail",
+      "Importance": 0.030364875233826413
+    },
+    {
+      "Feature": "categorical__sector_telecoms",
+      "Importance": 0.029627957585305904
+    },
+    {
+      "Feature": "categorical__sector_finance",
+      "Importance": 0.02927758032443796
+    },
+    {
+      "Feature": "categorical__method_poor security",
+      "Importance": 0.028326547897851367
+    },
+    {
+      "Feature": "categorical__sector_government",
+      "Importance": 0.025552941783981306
+    },
+    {
+      "Feature": "categorical__sector_tech",
+      "Importance": 0.025172826493268182
+    },
+    {
+      "Feature": "categorical__sector_app",
+      "Importance": 0.023832668682993496
+    },
+    {
+      "Feature": "categorical__method_oops!",
+      "Importance": 0.021287371019446614
+    },
+    {
+      "Feature": "categorical__sector_gaming",
+      "Importance": 0.021050765751121428
+    },
+    {
+      "Feature": "categorical__sector_transport",
+      "Importance": 0.020412233865233352
+    },
+    {
+      "Feature": "categorical__method_lost device",
+      "Importance": 0.018744104679961168
+    },
+    {
+      "Feature": "categorical__sector_misc",
+      "Importance": 0.01770137290232219
+    },
+    {
+      "Feature": "categorical__sector_academic",
+      "Importance": 0.015635742588567588
+    },
+    {
+      "Feature": "categorical__method_inside job",
+      "Importance": 0.012819176317396853
+    },
+    {
+      "Feature": "categorical__sector_web, gaming",
+      "Importance": 0.012062557147394412
+    },
+    {
+      "Feature": "categorical__sector_military",
+      "Importance": 0.009963838660001988
+    },
+    {
+      "Feature": "categorical__sector_government, military",
+      "Importance": 0.008740195654391518
+    },
+    {
+      "Feature": "categorical__sector_tech, web",
+      "Importance": 0.006043032042316778
+    },
+    {
+      "Feature": "categorical__sector_web, tech",
+      "Importance": 0.0028749932560099872
+    },
+    {
+      "Feature": "categorical__sector_legal",
+      "Importance": 0.002713120180831291
+    },
+    {
+      "Feature": "categorical__sector_tech, app",
+      "Importance": 0.0017841188719207527
+    },
+    {
+      "Feature": "categorical__sector_ngo",
+      "Importance": 0.0013527587642639266
+    },
+    {
+      "Feature": "categorical__sector_tech, health",
+      "Importance": 0.0011620061043290638
+    },
+    {
+      "Feature": "categorical__sector_web, military",
+      "Importance": 0.0011566364813212424
+    },
+    {
+      "Feature": "categorical__sector_government, health",
+      "Importance": 0.0010760037256126581
+    },
+    {
+      "Feature": "categorical__sector_military, health",
+      "Importance": 0.0005767182061561635
+    },
+    {
+      "Feature": "categorical__sector_tech, retail",
+      "Importance": 0.00029171752936445476
+    }
+  ]
+}
